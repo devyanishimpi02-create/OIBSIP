@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devyani Shimpi — Computer Engineering Student</title>
+<meta name="description" content="Portfolio of Devyani Narendra Shimpi, Computer Engineering student and aspiring software developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#hero" class="nav-logo">~/devyani</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">about</a></li>
+      <li><a href="#skills" class="nav-link">skills</a></li>
+      <li><a href="#projects" class="nav-link">projects</a></li>
+      <li><a href="#contact" class="nav-link">contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="prompt-line"><span class="prompt-symbol">$</span> whoami</p>
+        <h1 class="hero-name">Devyani Narendra<br>Shimpi</h1>
+        <p class="hero-role">Computer Engineering Student &mdash; Software Development &amp; Data Science Enthusiast</p>
+        <p class="hero-sub">Building practical solutions, one project at a time.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">devyani.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="avatar-mono">DS</div>
+            <p><span class="t-key">name</span><span class="t-op">:</span> <span class="t-val">"Devyani Shimpi"</span></p>
+            <p><span class="t-key">role</span><span class="t-op">:</span> <span class="t-val">"CE Student"</span></p>
+            <p><span class="t-key">focus</span><span class="t-op">:</span> <span class="t-val">"Software Dev, Data Science"</span></p>
+            <p><span class="t-key">status</span><span class="t-op">:</span> <span class="t-val t-highlight">"open to opportunities"</span><span class="cursor">&#9608;</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="file-label">about.md</p>
+      <div class="about-card">
+        <p>I am a Computer Engineering student with a strong interest in software development and emerging technologies. I enjoy learning new concepts, solving problems, and turning ideas into practical solutions.</p>
+        <p>I am continuously working on strengthening my technical skills, exploring new technologies, and building projects that help me grow as a developer.</p>
+        <p>I am currently looking forward to opportunities where I can apply my knowledge, learn from experienced professionals, and contribute to meaningful projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="file-label">skills.json</p>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">languages</h3>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">runtime &amp; data</h3>
+          <div class="tag-row">
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">npm</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">tools</h3>
+          <div class="tag-row">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="file-label">projects/</p>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="terminal-bar terminal-bar-sm">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">college-search-platform</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">College Search Platform</h3>
+            <p class="project-desc">Designed and managed a MySQL database to store structured college data — fees, seats, courses, marks, and location — with SQL queries built for filtering and comparison. Implemented search and comparison features integrated with the backend, and validated data through testing to ensure accuracy.</p>
+            <div class="tag-row tag-row-sm">
+              <span class="tag tag-sm">Node.js</span>
+              <span class="tag tag-sm">MYSQL</span>
+              <span class="tag tag-sm">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://college-search-platform-1.onrender.com" class="project-link project-link-primary" target="_blank" rel="noopener">Live Demo</a>
+              <a href="https://github.com/devyanishimpi02-create/College-Search-Platform" class="project-link" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="terminal-bar terminal-bar-sm">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">the-doubt-desk</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">The Doubt Desk</h3>
+            <p class="project-desc">An anonymous Q&amp;A platform where students can ask doubts — academic or general — without attaching their name, under two categories: Study Doubts and General Chat. Auto-generated identity tags (like "Anon Curious Falcon #42") keep things comfortable, and a lightweight points system rewards helpful answers with unlockable milestones.</p>
+            <div class="tag-row tag-row-sm">
+              <span class="tag tag-sm">Node.js</span>
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://the-doubt-desk.onrender.com" class="project-link project-link-primary" target="_blank" rel="noopener">Live Demo</a>
+              <a href="https://github.com/devyanishimpi02-create/The-Doubt-Desk" class="project-link" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt contact-section">
+    <div class="section-inner">
+      <p class="file-label">contact.sh</p>
+      <div class="contact-card">
+        <p class="prompt-line"><span class="prompt-symbol">$</span> echo $CONTACT</p>
+        <h2 class="contact-heading">Let's build something together.</h2>
+        <p class="contact-sub">Open to internships, collaborations, and interesting problems.</p>
+        <div class="contact-links">
+          <a href="mailto:devyanishimpi02@gmail.com" class="contact-link">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            devyanishimpi02@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/devyani-shimpi-8836b2349" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="16" x2="12" y2="11"/><path d="M12 13c0-1.5 3-2.5 3 0v3"/></svg>
+            </span>
+            LinkedIn
+          </a>
+          <a href="https://github.com/devyanishimpi02-create" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.36 1.08 2.93.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            </span>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Devyani Shimpi. Built with HTML &amp; CSS.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
