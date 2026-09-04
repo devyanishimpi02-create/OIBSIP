@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="scale-mark">−273.15°C — ABSOLUTE ZERO — 0K</div>
+  <h1>Temperature Converter</h1>
+  <p class="sub">Enter a value and its unit. It converts to the other two on the same scale.</p>
+
+  <div class="field">
+    <label for="temp-input">Temperature value</label>
+    <input type="text" id="temp-input" inputmode="decimal" placeholder="e.g. 100" autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label for="unit-select">Input unit</label>
+    <select id="unit-select">
+      <option value="C">Celsius (°C)</option>
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+  </div>
+
+  <button class="convert" id="convert-btn">Convert</button>
+  <button class="reset-link" id="reset-btn">Clear</button>
+
+  <div class="error" id="error-box"></div>
+
+  <div class="results" id="results-box">
+    <div class="results-label">CONVERTED VALUES</div>
+    <div class="result-row" id="row-C">
+      <span class="result-unit">°C<span class="full">Celsius</span></span>
+      <span class="result-value" id="val-C">—</span>
+    </div>
+    <div class="result-row" id="row-F">
+      <span class="result-unit">°F<span class="full">Fahrenheit</span></span>
+      <span class="result-value" id="val-F">—</span>
+    </div>
+    <div class="result-row" id="row-K">
+      <span class="result-unit">K<span class="full">Kelvin</span></span>
+      <span class="result-value" id="val-K">—</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

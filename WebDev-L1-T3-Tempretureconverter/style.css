@@ -1,0 +1,235 @@
+:root {
+  --cold: #3E7CB1;
+  --hot: #C1443C;
+  --ink: #1B1D22;
+  --paper: #F6F4EF;
+  --line: #D8D3C7;
+  --mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  --sans: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: local('IBM Plex Mono');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  background-image:
+    linear-gradient(180deg, rgba(62,124,177,0.06), rgba(193,68,60,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 36px 32px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cold), var(--hot));
+}
+
+.scale-mark {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #8A8578;
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-size: 13.5px;
+  color: #6B6759;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #35322B;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 16px;
+  font-family: var(--mono);
+  border: 1.5px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+select {
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+input[type="text"].invalid {
+  border-color: var(--hot);
+  background: #FDF3F2;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.row .field {
+  flex: 1;
+}
+
+button.convert {
+  width: 100%;
+  padding: 13px;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--sans);
+  color: #FFFFFF;
+  background: var(--ink);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease;
+}
+
+button.convert:hover {
+  background: #33353C;
+}
+
+button.convert:active {
+  transform: translateY(1px);
+}
+
+.reset-link {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #8A8578;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--sans);
+}
+
+.error {
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: #FDF3F2;
+  border: 1px solid #E8B4AF;
+  border-radius: 3px;
+  color: #9B2E27;
+  font-size: 13.5px;
+  line-height: 1.5;
+  display: none;
+}
+
+.error.show {
+  display: block;
+}
+
+.results {
+  margin-top: 22px;
+  display: none;
+}
+
+.results.show {
+  display: block;
+  animation: reveal 0.25s ease;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.results-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #8A8578;
+  margin-bottom: 10px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.result-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.result-row.source {
+  opacity: 0.5;
+}
+
+.result-unit {
+  font-size: 14px;
+  font-weight: 600;
+  color: #35322B;
+}
+
+.result-unit .full {
+  font-weight: 400;
+  color: #8A8578;
+  margin-left: 6px;
+  font-size: 12.5px;
+}
+
+.result-value {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.result-row.source .result-value {
+  color: #8A8578;
+  font-size: 17px;
+}
